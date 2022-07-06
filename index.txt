@@ -1,0 +1,19 @@
+
+source
+	src/kernel		kernel entry point and main routine
+	src/api			arfOS API
+	src/libc		arfOS libc (C standard library) implementation
+
+build
+	obj/			compiled object files
+	kernel			linked main, API and libc statically linked
+
+output
+	grub.cfg		GRUB configuration
+	kernel.iso		kernel bootable ISO
+	iso/			boot filesystem
+
+build utilities
+	make.sh			compile and link source
+	pack.sh			make GRUB boot ISO
+	build.sh		make.sh and pack.sh
