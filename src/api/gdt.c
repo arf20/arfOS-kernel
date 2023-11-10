@@ -1,5 +1,9 @@
 #include "gdt.h"
 
+struct GDTEntry GDT[3];
+BYTE entry_ptr;
+struct GDTPointer gdt_ptr;
+
 /*static void GDTLoad() {
     asm volatile("lgdt %0\n"
 		"pushq %%rbp\n"

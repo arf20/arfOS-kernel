@@ -2,8 +2,7 @@
 #include "defs.h"
 
 #ifndef _H_MEMM
-	#define _H_MEMM
-#endif
+#define _H_MEMM
 
 #define	MEMS_RESERVED	0
 #define MEMS_ALLOC		1
@@ -20,3 +19,6 @@ void MemManInit();
 // Application side
 PTR RealAlloc();
 void RealFree();
+
+#endif
+

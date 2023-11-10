@@ -1,4 +1,7 @@
 // idt.h: Interrupt descriptor table init and load
+#ifndef _IDT_H
+#define _IDT_H
+
 #include "defs.h"
 
 #define IDT_SIZE 256
@@ -26,7 +29,7 @@ struct IDTPointer {
 	DWORD addr;
 };
 
-struct IDTEntry IDT[IDT_SIZE];
+extern struct IDTEntry IDT[IDT_SIZE];
 
 
 extern void ASM_ISR0(void);
@@ -71,3 +74,6 @@ extern void _isr31(void);
 extern void IDTLoad();
 
 void IDTInit();
+
+#endif
+

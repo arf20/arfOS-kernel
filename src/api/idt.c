@@ -5,6 +5,8 @@
 #include "keyb.h"
 #include "io.h"
 
+struct IDTEntry IDT[IDT_SIZE];
+
 void IDTNewEntry(BYTE idx, DWORD offset, WORD selector, BYTE type) {
 	IDT[idx].offset_low = 	(offset >>  0) & 0xFFFF;
     IDT[idx].offset_high = 	(offset >> 16) & 0xFFFF;

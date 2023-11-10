@@ -1,8 +1,7 @@
 // VGA 80x25 text mode driver and functions
 
 #ifndef _H_VGA
-	#define _H_VGA
-#endif
+#define _H_VGA
 
 #define VGA_ADDRESS 0xB8000
 
@@ -26,7 +25,7 @@
 #define VGAC_YELLOW   14
 #define VGAC_WHITE    15
 
-unsigned short *VGABuff;
+extern unsigned short *VGABuff;
 
 void outb( unsigned short port, unsigned char val );
 unsigned char inb (unsigned short int __port);
@@ -39,3 +38,6 @@ void VGACursorEnable(unsigned char start, unsigned char end);
 void VGACursorDisable();
 void VGACursorSet(unsigned short x, unsigned short y);
 unsigned short VGACursorGet();
+
+#endif
+

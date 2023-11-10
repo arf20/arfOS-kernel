@@ -2,6 +2,8 @@
 #include "vga.h"
 #include "io.h"
 
+unsigned short *VGABuff;
+
 void VGAInit() {
 	VGABuff = (unsigned short *)VGA_ADDRESS;
 }

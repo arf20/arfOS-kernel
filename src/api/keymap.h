@@ -1,8 +1,7 @@
 // PS/2 Compatible keyboard layout map
 
 #ifndef _H_KEYMAP
-	#define _H_KEYMAP
-#endif
+#define _H_KEYMAP
 
 /* The following array is taken from 
     http://www.osdever.net/bkerndev/Docs/keyboard.htm */
@@ -46,3 +45,6 @@ const unsigned char keymap_US[128] =
     0, /* F12 Key */
     0, /* All other keys are undefined */
 };
+
+#endif
+

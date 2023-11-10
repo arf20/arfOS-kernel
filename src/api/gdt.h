@@ -1,4 +1,7 @@
-// idt.h: Global descriptor table init and load
+// gdt.h: Global descriptor table init and load
+#ifndef _GDT_H
+#define _GDT_H
+
 #include "defs.h"
 
 #define GDT_ACCESS_ATTR_NULL        0x00
@@ -33,11 +36,14 @@ struct GDTPointer {
     DWORD addr;
 } PACKED;
 
-struct GDTEntry GDT[3];
-BYTE entry_ptr;
-struct GDTPointer gdt_ptr;
+extern struct GDTEntry GDT[3];
+extern BYTE entry_ptr;
+extern struct GDTPointer gdt_ptr;
 
-extern void GDTLoad();
+void GDTLoad();
 
 void GDTNewEntry(DWORD base, DWORD limit, BYTE access, BYTE flags);
 void GDTInit();
+
+#endif
+
